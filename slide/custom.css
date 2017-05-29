@@ -1,0 +1,14 @@
+body {
+    background-color: #fdc;
+    color: #300;
+}
+
+blockquote {
+    color: #888;
+    border-left: solid 0.3vw #888;
+    padding-left: 1.2vw;
+}
+
+a {
+    color: inherit;
+}
