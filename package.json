@@ -1,0 +1,14 @@
+{
+  "name": "170602_firebase",
+  "version": "1.0.0",
+  "description": "firebase slides.",
+  "main": "README.md",
+  "author": "Fujisawa Shin",
+  "license": "MIT",
+  "scripts": {
+    "start": "sector-slide --server README.md"
+  },
+  "devDependencies": {
+    "sector-slide": "^1.1.0"
+  }
+}
