@@ -4,11 +4,40 @@ body {
 }
 
 blockquote {
-    color: #888;
-    border-left: solid 0.3vw #888;
+    opacity: 0.5;
+    border-left: solid 0.3vw;
     padding-left: 1.2vw;
+}
+
+code {
+    background-color: #300;
+    color: #fff;
 }
 
 a {
     color: inherit;
+}
+
+
+section h1,
+section h2,
+section h3,
+section h4 {
+    width: 90%;
+    left: 5%;
+}
+
+section footer {
+    display: block;
+    font-size: 50%;
+}
+
+article span,
+section span {
+    display: inline-block;
+}
+
+strong {
+    font-weight: bold;
+    color: #f44;
 }
