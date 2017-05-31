@@ -7,7 +7,9 @@
 > Firebase は、優れたアプリを開発し、ユーザー層を拡大し、より大きな収益を上げるためのツールです。インフラ構築に手間取ることなくビジネスを収益化し、ユーザーにとっての利便性に集中できます。
 
 - ??
-
+- いわゆるmBaaSと呼ばれているもの
+- (mobile Backend as a Service)
+- アプリでの用途がメイン
 
 ## つかってみよう
 
@@ -64,16 +66,19 @@ $ firebase init
 
 - セキュリティ面は、パスごとの権限設定で守るもの
 - データベースへの接続自体が誰でもできちゃうことが気になるなら、hostの制限は追加できる（Map API使う時に近い）
-
 - [FirebaseのApiKeyとAppIDはHTMLソースにコピペしてもセキュア - test.py](http://testpy.hatenablog.com/entry/2016/09/18/093000)
 
 ### Q. <span>Milkcocoa</span><span>ってやつと</span><span>どう違う？</span>
 
 **A. かなり似てるけど、firebase functionsにあたるものが向こうにはない**
 
+- cliが充実しているのも使いやすさの一助
 - [Document | Milkcocoa](https://mlkcca.com/document/)
+
+### Q. 他のmBaaSとはどう違う？
 
 
 ## 参考資料
 
 - [Firebaseの始め方 - Qiita](http://qiita.com/kohashi/items/43ea22f61ade45972881)
+- [第1回　一歩進んだMBaas，Firebaseとは？：スマホアプリ開発を加速する，Firebaseを使ってみよう｜gihyo.jp … 技術評論社](http://gihyo.jp/dev/serial/01/firebase/0001)
