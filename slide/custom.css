@@ -32,6 +32,12 @@ section footer {
     font-size: 50%;
 }
 
+article img {
+    display: block;
+    margin: auto;
+    max-width: 30vw;
+}
+
 article span,
 section span {
     display: inline-block;

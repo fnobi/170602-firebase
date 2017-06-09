@@ -32,6 +32,12 @@ section footer {
     font-size: 50%;
 }
 
+article img {
+    display: block;
+    margin: auto;
+    max-width: 30vw;
+}
+
 article span,
 section span {
     display: inline-block;
@@ -40,7 +46,7 @@ section span {
 strong {
     font-weight: bold;
     color: #f44;
-}</style></head><body><main></article><section><h1>firebase :fire:<footer>@fnobi</footer></h1></section><section><h2>firebaseとは？</h2></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>firebaseとは？</h2></header><p><a href="https://firebase.google.com/">https://firebase.google.com/</a></p><blockquote><p>Firebase は、優れたアプリを開発し、ユーザー層を拡大し、より大きな収益を上げるためのツールです。インフラ構築に手間取ることなくビジネスを収益化し、ユーザーにとっての利便性に集中できます。</p></blockquote><ul><li>??</li><li>いわゆるmBaaSと呼ばれているもの</li><li>(mobile Backend as a Service)</li><li>アプリでの用途がメイン</li></ul></article><section><h2>つかってみよう</h2></section><section><h3>管理画面にログイン</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>つかってみよう</h2><h3>管理画面にログイン</h3></header><p><a href="https://console.firebase.google.com/">https://console.firebase.google.com/</a></p><ul><li>アカウントはgoogleアカウントに紐付きます。いきなりfirebaseトップにアクセスしても、googleログインすればもうプロジェクトが作成できる状態。</li><li>てきとうにプロジェクトをつくっておこう。</li></ul></article><section><h3>install</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>つかってみよう</h2><h3>install</h3></header><p><pre><code>&#35; CLIツールのインストール
+}</style></head><body><main></article><section><h1>firebase :fire:<footer>@fnobi</footer></h1></section><section><h2>firebaseとは？</h2></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>firebaseとは？</h2></header><p><a href="https://firebase.google.com/">https://firebase.google.com/</a></p><blockquote><p>Firebase は、優れたアプリを開発し、ユーザー層を拡大し、より大きな収益を上げるためのツールです。インフラ構築に手間取ることなくビジネスを収益化し、ユーザーにとっての利便性に集中できます。</p></blockquote><ul><li>??</li></ul></article><section><h3>特徴</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>firebaseとは？</h2><h3>特徴</h3></header><ul><li>いわゆるmBaaSと呼ばれているもの<ul><li>(mobile Backend as a Service)</li><li>スマホアプリと連携して使われるケースが多い</li></ul></li><li>リアルタイム処理対応のデータベース提供を軸とする<ul><li>特定のパスに情報を配置できる / 配置された際にイベントを受け取れる</li></ul></li><li>オフラインでの動作にも対応</li></ul></article><section><h2>つかってみよう</h2></section><section><h3>管理画面にログイン</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>つかってみよう</h2><h3>管理画面にログイン</h3></header><p><a href="https://console.firebase.google.com/">https://console.firebase.google.com/</a></p><ul><li>アカウントはgoogleアカウントに紐付きます。いきなりfirebaseトップにアクセスしても、googleログインすればもうプロジェクトが作成できる状態。</li><li>てきとうにプロジェクトをつくっておこう。</li></ul></article><section><h3>install</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>つかってみよう</h2><h3>install</h3></header><p><pre><code>&#35; CLIツールのインストール
 $ npm install -g firebase-tools
 &nbsp;
 &#35; ログイン
@@ -49,7 +55,34 @@ $ firebase login
 $ cd nobi-nobi-sample
 $ firebase init
 &#35; => かっこいいロゴが出たあといろいろ聞かれる
-</code></pre></p><ul><li>対話方式で、どんな機能が必要か選んだり、依存モジュール(npm)のインストールをしたり、いろいろ済ませてくれます。</li></ul></article><section><h3>データベースをつかう</h3></section><section><h3>変更を検知: <span>リアルタイム</span></h3></section><section><h2>firebase functions</h2></section><section><h2>疑問たち</h2></section><section><h3>Q. でも、お高いんでしょう？</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>疑問たち</h2><h3>Q. でも、お高いんでしょう？</h3></header><p><strong>A. 個人利用する分には大丈夫そう</strong></p></article><section><h3>Q. API Key、めっちゃ<span>晒されてるけど</span><span>大丈夫？？？？</span></h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>疑問たち</h2><h3>Q. API Key、めっちゃ<span>晒されてるけど</span><span>大丈夫？？？？</span></h3></header><p><strong>A. 大丈夫っちゃ大丈夫</strong></p><ul><li>セキュリティ面は、パスごとの権限設定で守るもの</li><li>データベースへの接続自体が誰でもできちゃうことが気になるなら、hostの制限は追加できる（Map API使う時に近い）</li><li><a href="http://testpy.hatenablog.com/entry/2016/09/18/093000">FirebaseのApiKeyとAppIDはHTMLソースにコピペしてもセキュア - test.py</a></li></ul></article><section><h3>Q. <span>Milkcocoa</span><span>ってやつと</span><span>どう違う？</span></h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>疑問たち</h2><h3>Q. <span>Milkcocoa</span><span>ってやつと</span><span>どう違う？</span></h3></header><p><strong>A. かなり似てるけど、firebase functionsにあたるものが向こうにはない</strong></p><ul><li>cliが充実しているのも使いやすさの一助</li><li><a href="https://mlkcca.com/document/">Document | Milkcocoa</a></li></ul></article><section><h3>Q. 他のmBaaSとはどう違う？</h3></section><section><h2>参考資料</h2></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>参考資料</h2></header><ul><li><a href="http://qiita.com/kohashi/items/43ea22f61ade45972881">Firebaseの始め方 - Qiita</a></li><li><a href="http://gihyo.jp/dev/serial/01/firebase/0001">第1回　一歩進んだMBaas，Firebaseとは？：スマホアプリ開発を加速する，Firebaseを使ってみよう｜gihyo.jp … 技術評論社</a></li></ul></main><script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+</code></pre></p><ul><li>対話方式で、どんな機能が必要か選んだり、依存モジュール(npm)のインストールをしたり、いろいろ済ませてくれます。</li></ul></article><section><h3>静的サイトをローカルで動かす</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>つかってみよう</h2><h3>静的サイトをローカルで動かす</h3></header><p><pre><code>$ firebase serve
+</code></pre></p><p>以上。</p></article><section><h3>データベースをつかう</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>つかってみよう</h2><h3>データベースをつかう</h3></header><ul><li>管理画面から「ウェブアプリにFirebaseを追加」を選択</li><li>出てきたコードをコピペ</li></ul><p><img alt="ウェブアプリに追加するぞい" src="/images/webapp.png"></img></p></article><section><h3>変更を検知: <span>リアルタイム</span></h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>つかってみよう</h2><h3>変更を検知: <span>リアルタイム</span></h3></header><p><pre><code>var db = firebase.database();
+var myChatAll = db.ref('/public/chat');
+&nbsp;
+function changeData () {
+  var text = document.getElementById('my_text').value;
+  myChatAll.set({ title: 'example', text: text });
+}
+&nbsp;
+myChatAll.on('value', function(snapshot) {
+  document.getElementById('chatText').innerText = snapshot.val().text;
+});
+</code></pre></p></article><section><h2>firebase functions</h2></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>firebase functions</h2></header><p>データベースに書き込みがあったときなどにフックして、サーバー側で行う処理を書くことができる！</p><p><pre><code>&#35; もちゃもちゃとjsを書く
+$ vi functions/index.js
+&nbsp;
+&#35; デプロイ！（functions部分だけ）
+$ firebase deploy --only functions
+</code></pre></p></article><section><h3>実装例</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>firebase functions</h2><h3>実装例</h3></header><p><pre><code>// データベースの更新にフックする処理
+exports.dbHook = functions.database.ref('/public/chat').onWrite((event) => {
+    const val = event.data.val();
+    const text = val.text;
+    return event.data.ref.child('doubleText').set(text + text);
+});
+</code></pre></p><p><pre><code>// 特定のパスにアクセスした場合の処理
+exports.httpHook = functions.https.onRequest((request, response) => {
+    response.send("Hello from Firebase!");
+});
+</code></pre></p></article><section><h2>疑問たち</h2></section><section><h3>Q. でも、お高いんでしょう？</h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>疑問たち</h2><h3>Q. でも、お高いんでしょう？</h3></header><p><strong>A. 個人利用する分には大丈夫そう</strong></p><ul><li><a href="https://firebase.google.com/pricing/?hl=ja">Pricing</a></li></ul></article><section><h3>Q. API Key、めっちゃ<span>晒されてるけど</span><span>大丈夫？？？？</span></h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>疑問たち</h2><h3>Q. API Key、めっちゃ<span>晒されてるけど</span><span>大丈夫？？？？</span></h3></header><p><strong>A. 大丈夫っちゃ大丈夫</strong></p><ul><li>セキュリティ面は、パスごとの権限設定で守るもの</li><li>データベースへの接続自体が誰でもできちゃうことが気になるなら、hostの制限は追加できる（Map API使う時に近い）</li><li><a href="http://testpy.hatenablog.com/entry/2016/09/18/093000">FirebaseのApiKeyとAppIDはHTMLソースにコピペしてもセキュア - test.py</a></li></ul></article><section><h3>Q. <span>Milkcocoa</span><span>ってやつと</span><span>どう違う？</span></h3></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>疑問たち</h2><h3>Q. <span>Milkcocoa</span><span>ってやつと</span><span>どう違う？</span></h3></header><p><strong>A. かなり似てるけど、firebase functionsにあたるものが向こうにはない</strong></p><ul><li>cliが充実しているのも使いやすさの一助</li><li><a href="https://mlkcca.com/document/">Document | Milkcocoa</a></li></ul></article><section><h2>まとめ</h2></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>まとめ</h2></header><ul><li>リアルタイム処理も可能なサーバーサイドプログラムを、インフラ構築なしで実現可能</li><li>all javascriptでいけるのでフロントエンジニアフレンドリー</li><li>npm周り・cli周りがけっこう整備してあるので、ガッツリ開発にも対応しやすい</li></ul></article><section><h2>おわり</h2></section><section><h2>参考資料</h2></section><article><header><h1>firebase :fire:<footer>@fnobi</footer></h1><h2>参考資料</h2></header><ul><li><a href="http://qiita.com/kohashi/items/43ea22f61ade45972881">Firebaseの始め方 - Qiita</a></li><li><a href="http://gihyo.jp/dev/serial/01/firebase/0001">第1回　一歩進んだMBaas，Firebaseとは？：スマホアプリ開発を加速する，Firebaseを使ってみよう｜gihyo.jp … 技術評論社</a></li><li><a href="http://qiita.com/koki_cheese/items/013d4e6ab5aefc792388">Cloud Functions for Firebaseとは？ - Qiita</a></li></ul></main><script>(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
